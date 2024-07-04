@@ -23,7 +23,7 @@
         cargo
         wasm-pack
         nodejs
-        
+
         hexo-cli
         obsidian
         
@@ -59,6 +59,7 @@
       system = "aarch64-darwin";
       modules = [
         configuration
+        (import ./homebrew.nix)
         (import ./yabai.nix)
         (import ./skhd.nix)
         (import ./sketchybar.nix)

@@ -1,12 +1,14 @@
-{ pkgs }:
+{ pkgs, ... }:
+
+let
+  homebrew = pkgs.callPackage pkgs.homebrew {};
+in
 {
-  homebrew.enable = true;
-
-  homebrew.installDir = "$HOME/.config/homebrew";
-
-  environment.systemPackages = with pkgs; [
-    homebrew
-    homebrew.packages.cool-retro-term
-  ];
+  homebrew = {
+    enable = true;
+    packages = with homebrew.packages.aarch64-darwin; [
+      cool-retro-term
+    ];
+  };
 }
 

@@ -10,7 +10,6 @@
    #vscode-fhs
 	 #neovim
 	 #cool-retro-term
-    
     btop
     neofetch
     cmatrix
@@ -24,10 +23,10 @@
     fzf
     jq
     tldr
-    #krita
+
     #arduino-ide
 
-   (discord.override {withVencord = true;}) 
+    discord
     spotify
 
   ] ++ lib.optionals stdenv.isDarwin [
@@ -77,6 +76,11 @@
 		  name = "powerlevel10k-config";
 		  src = ./p10k-config;
 		  file = ".p10k.zsh";
+    }
+    {
+      name = "zsh-vscode";
+      src = ./zsh/plugins/zsh-vscode;
+      file = "zsh-vscode.plugin.zsh";
     }];
     
 	  oh-my-zsh = {

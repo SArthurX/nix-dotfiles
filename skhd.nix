@@ -2,7 +2,7 @@
   services.skhd = {
     enable = true;
     skhdConfig = ''
-      alt - return : open -na /Applications/Nix\ Apps/Warp.app
+      alt - return : open -na /nix/store/dar3shhqh608sdd4pnw0b66ca6bq8niq-alacritty-0.13.1/Applications/Alacritty.app
 
       alt + shift - c : open /Applications/Visual\ Studio\ Code.app
       

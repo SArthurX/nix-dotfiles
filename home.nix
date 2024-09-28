@@ -9,7 +9,11 @@
   home.packages = with pkgs; [
    #vscode-fhs
 	 #neovim
-	 #cool-retro-term
+	  alacritty
+	  zellij
+    
+
+
     btop
     neofetch
     cmatrix
@@ -51,6 +55,21 @@
   programs.autojump.enable = true;
   programs.bat.enable = true;
   programs.fzf.enable = true;  
+  programs.alacritty.enable = true;
+  
+
+  programs.alacritty = {
+    settings = {
+      window.opacity = 0.5;
+
+      font = {
+        normal = {
+          family = "MesloLGS NF";
+          style = "Regular";
+        };
+      };
+    };
+  };
 
 
   programs.zsh = {
@@ -77,11 +96,12 @@
 		  src = ./p10k-config;
 		  file = ".p10k.zsh";
     }
-    {
-      name = "zsh-vscode";
-      src = ./zsh/plugins/zsh-vscode;
-      file = "zsh-vscode.plugin.zsh";
-    }];
+    #{
+    #  name = "zsh-vscode";
+    #  src = ./zsh/plugins/zsh-vscode;
+    #  file = "zsh-vscode.plugin.zsh";
+    #}
+    ];
     
 	  oh-my-zsh = {
 		  enable = false;

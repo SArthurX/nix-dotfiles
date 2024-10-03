@@ -19,6 +19,7 @@
     cmatrix
     cbonsai
     bat
+    ffmpeg
 
     curl
     wget

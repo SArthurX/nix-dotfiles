@@ -93,14 +93,14 @@
     }
     {
 		  name = "powerlevel10k-config";
-		  src = ./p10k-config;
+		  src = ./zsh/p10k-config;
 		  file = ".p10k.zsh";
     }
-    #{
-    #  name = "zsh-vscode";
-    #  src = ./zsh/plugins/zsh-vscode;
-    #  file = "zsh-vscode.plugin.zsh";
-    #}
+    {
+      name = "zsh-vscode";
+      src = ./zsh/plugins/zsh-vscode;
+      file = "zsh-vscode.plugin.zsh";
+    }
     ];
     
 	  oh-my-zsh = {

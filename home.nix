@@ -11,6 +11,7 @@
 	 #neovim
 	  alacritty
 	  zellij
+	  tigervnc
     
 
 
@@ -43,7 +44,6 @@
     (self: super: {
       libsepol = super.libsepol.overrideAttrs (oldAttrs: {
         preConfigure = ''
-          substituteInPlace Makefile --replace "gln" "ln"
         '';
       });
     })

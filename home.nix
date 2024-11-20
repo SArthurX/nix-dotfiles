@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
@@ -29,11 +29,13 @@
     fzf
     jq
     tldr
+    yazi
 
     #arduino-ide
 
     discord
     spotify
+
 
   ] ++ lib.optionals stdenv.isDarwin [
     	cocoapods
